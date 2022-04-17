@@ -1,8 +1,18 @@
+import "./main.css";
+
 import {useState, useEffect, useRef} from "react";
 import updateFlatsAction from "../../redux/updateFlats/action";
 import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 export default function Main(){
+
+    const Navigate = useNavigate();
+
+    let isLoggedIn = JSON.parse(localStorage.getItem("isLoggedIn")) || false;
+    if(!isLoggedIn){
+        Navigate("/login");
+    }
 
     const dispatch = useDispatch();
 
@@ -92,7 +102,7 @@ export default function Main(){
     return (
         <div>
             
-            <div>
+            <div id="filter_sort_search">
                 {/* filter */}
                 <div>
                     <label htmlFor="filterByResidentType">Filter by resident type</label>
@@ -145,7 +155,7 @@ export default function Main(){
                 </tbody>
             </table>
 
-            <div>
+            <div id="navigatePage">
                 <button id="prevPage" onClick={(e) => {
                     if(page.current > 1)
                     {

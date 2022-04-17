@@ -1,0 +1,31 @@
+#filter_sort_search{
+    /* border: 1px solid red; */
+    padding: 1%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5%;
+}
+
+table#displayFlats{
+    /* border: 1px solid red; */
+    border-spacing: 0px;
+    text-align: center;
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+table#displayFlats > tbody > tr:nth-child(odd){
+    background: pink;
+}
+
+table#displayFlats th, table#displayFlats td{
+    padding: 5px;
+}
+
+div#navigatePage{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}

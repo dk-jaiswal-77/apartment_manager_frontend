@@ -28,7 +28,8 @@ export default function Login(){
             let res_data = await res.json();
             // console.log(res_data);
             if(res_data.status){
-                Navigate("/main");
+                localStorage.setItem("isLoggedIn", JSON.stringify(true));
+                Navigate("/");
             }
 
         }catch(error){
@@ -48,6 +49,10 @@ export default function Login(){
 
                 <input type="submit" value="Log In" />
             </form>
+
+            <button onClick={()=>{
+                Navigate("/register");
+            }}>Create an account</button>
         </div>
     );
 }
