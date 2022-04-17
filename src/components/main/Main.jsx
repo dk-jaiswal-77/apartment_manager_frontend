@@ -64,20 +64,62 @@ export default function Main(){
         }
     }
 
+    function sortByFlatNo(e){
+        if(e.target.value === "asc")
+        {
+            flats.sort((a, b) => ((+a.flat_no)-(+b.flat_no)));
+            setModifiedFlats([...flats]);
+        }
+        else if(e.target.value === "desc")
+        {
+            flats.sort((a, b) => ((+b.flat_no)-(+a.flat_no)));
+            setModifiedFlats([...flats]);
+        }
+        console.log("---", flats);
+    }
+
+    const [search, setSearch] = useState("");
+
+    function handleChange(e){
+        setSearch(e.target.value.trim());
+    }
+
+    function searchByBlock(e){
+        e.preventDefault();
+        setModifiedFlats(flats.filter((flat) => (flat.block === search)));
+    }
+
     return (
         <div>
             
             <div>
+                {/* filter */}
                 <div>
-                    <label htmlFor=""></label>
+                    <label htmlFor="filterByResidentType">Filter by resident type</label>
+
                     <select id="filterByResidentType" onChange={filterByResidentType}>
                         <option value="all">--all--</option>
                         <option value="owner">owner</option>
                         <option value="tenant">tenant</option>
                     </select>
                 </div>
-                <div></div>
-                <div></div>
+
+                {/* sorting */}
+                <div>
+                    <label htmlFor="sortByFlatNo">Sort by flat no.</label>
+
+                    <select id="sortByFlatNo" onChange={sortByFlatNo}>
+                        <option value="asc">Asc</option>
+                        <option value="desc">Desc</option>
+                    </select>
+                </div>
+
+                {/* search */}
+                <form onSubmit={searchByBlock}>
+                    <input type="text" id="search" placeholder="search by block name" onChange={handleChange} />
+                    <input type="submit" value="Search" />
+                </form>
+
             </div>
 
             <table id="displayFlats">
