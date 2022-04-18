@@ -7,6 +7,7 @@ import Register from './components/register/Register';
 import Login from './components/login/Login';
 import Main from './components/main/Main';
 import AddFlat from './components/addFlat/AddFlat';
+import EditFlat from './components/editFlat/EditFlat';
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         < Route path="/login" element={<Login />} />
         < Route path="/register" element={<Register />} />
         < Route path="/addFlat" element={< AddFlat />} />  
+        < Route path="/editFlat" element={< EditFlat />} />  
       </Routes>
 
     </div>

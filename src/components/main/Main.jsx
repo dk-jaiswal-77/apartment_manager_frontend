@@ -99,6 +99,15 @@ export default function Main(){
         setModifiedFlats(flats.filter((flat) => (flat.block === search)));
     }
 
+    //--------------------------------------->
+    function navigateToEditFlatPage(e){
+        // console.log(e.target.parentNode.parentNode.id);
+        const editFlat_id = e.target.parentNode.parentNode.id;
+        const [editFlat] = flats.filter((flat) => (flat._id === editFlat_id));
+        localStorage.setItem("editFlat", JSON.stringify(editFlat));
+        Navigate("/editFlat");
+    }
+
     return (
         <div>
             
@@ -149,6 +158,7 @@ export default function Main(){
                                 <td>{flat.block}</td>
                                 <td>{flat.flat_no}</td>
                                 <td>{flat.residents_count}</td>
+                                <td><button id="edit_flat_btn" onClick={navigateToEditFlatPage}>Edit Flat</button></td>
                             </tr>
                         );
                     })}

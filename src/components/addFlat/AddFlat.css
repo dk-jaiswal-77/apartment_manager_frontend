@@ -1,0 +1,17 @@
+#addFlat_container{
+    border: 2px solid black;
+    border-radius: 5px;
+    width: 30%;
+    margin: 0% auto;
+    padding: 1rem 1rem 2.3rem;
+}
+
+#addFlat_container > form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.addFlat_entry{
+    padding: 0.5rem 1rem;
+}

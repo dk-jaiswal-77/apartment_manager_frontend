@@ -29,3 +29,14 @@ div#navigatePage{
     justify-content: center;
     gap: 30px;
 }
+
+#edit_flat_btn{
+    border: 1px solid black;
+    border-radius: 3px;
+    background: transparent;
+    color: black;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.3rem;
+}

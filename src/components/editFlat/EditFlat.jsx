@@ -1,23 +1,27 @@
-import "./AddFlat.css";
+import "./EditFlat.css";
 import {useState} from "react";
 
-export default function AddFlat(){
+export default function EditFlat(){
 
-    const [detail, setDetail] = useState({
-        flat_type : "none",
-        block : "",
-        flat_no : "",
-        residents_count : ""
-    });
+    let editFlat = JSON.parse(localStorage.getItem("editFlat"));
+
+    let editFlat_details = {
+        flat_type : editFlat.flat_type, 
+        block : editFlat.block,
+        flat_no : editFlat.flat_no,
+        residents_count : editFlat.residents_count
+    }
+
+    const [detail, setDetail] = useState(editFlat_details);
 
     function handleChange(e){
         setDetail({...detail, [e.target.id] : e.target.value.trim()});
     }
 
-    async function saveFlat(){
+    async function updateFlat(){
         try{
-            await fetch("http://localhost:3007/flats", {
-                method : "POST", 
+            await fetch(`http://localhost:3007/flats/${editFlat._id}`, {
+                method : "PATCH", 
                 body : JSON.stringify(detail),
                 headers : {
                     "Content-Type" : "application/json"
@@ -27,7 +31,7 @@ export default function AddFlat(){
                 flat_type : "none",
                 block : "",
                 flat_no : "",
-                residents_count : "0"
+                residents_count : ""
             });
         }catch(error){
             console.log(error);
@@ -38,9 +42,9 @@ export default function AddFlat(){
         <div id="addFlat_container">
             <form onSubmit={(e)=>{
                 e.preventDefault();
-                saveFlat(); 
+                updateFlat(); 
             }}>
-                <h2>Add flat</h2>
+                <h2>Edit flat</h2>
                 <select id="flat_type" className="addFlat_entry" value={detail.flat_type} onChange={handleChange} >
                     <option value="none">--select flat type--</option>
                     <option value="owner">owner</option>
@@ -53,9 +57,15 @@ export default function AddFlat(){
 
                 <input type="number" id="residents_count" className="addFlat_entry" placeholder="enter no. of residents" value={detail.residents_count} onChange={handleChange} />
 
-                <input type="submit" value="Add flat" className="addFlat_entry" />
+                <input type="submit" value="Update flat" className="addFlat_entry" />
             </form>
         </div>
     );
 }
 
+// {
+//     flat_type : "none",
+//     block : "",
+//     flat_no : "",
+//     residents_count : ""
+// }
