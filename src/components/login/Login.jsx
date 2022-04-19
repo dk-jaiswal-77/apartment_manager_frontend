@@ -1,3 +1,4 @@
+import "./Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -42,17 +43,22 @@ export default function Login(){
             <form onSubmit={(e)=>{
                 e.preventDefault();
                 loginUser();
-            }}>
-                <input type="email" id="email" value={login.email} placeholder="enter email" onChange={handleChange} />
+            }} id="login_form">
 
-                <input type="password" id="password" value={login.password} placeholder="enter password" onChange={handleChange} />
+            <h2>Log In</h2>
 
-                <input type="submit" value="Log In" />
+                <input type="email" id="email" className="login_entry" value={login.email} placeholder="enter email" onChange={handleChange} />
+
+                <input type="password" id="password" className="login_entry" value={login.password} placeholder="enter password" onChange={handleChange} />
+
+                <input type="submit" value="Log In" className="login_entry" />
+
+                
+                <button onClick={()=>{
+                    Navigate("/register");
+                }} className="login_entry">Create an account - Sign Up</button>
             </form>
 
-            <button onClick={()=>{
-                Navigate("/register");
-            }}>Create an account</button>
         </div>
     );
 }

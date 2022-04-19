@@ -1,0 +1,40 @@
+#resident_container{
+    display: flex;
+    /* border: 1px solid red; */
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#resident_container > *{
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 1rem 1rem 2rem;
+}
+
+div.showResidents > table{
+    width: 100%;
+    text-align: center;
+    /* border: 1px solid red; */
+    border-spacing: 0;
+}
+
+div.showResidents > table > tbody > tr:nth-child(odd){
+    background: pink;
+}
+
+/* -------------------------------------- */
+#addResident_form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.addResident_entry{
+    padding: 0.5rem 1rem;
+}
+
+#resident_container h2{
+    text-align: center;    
+}

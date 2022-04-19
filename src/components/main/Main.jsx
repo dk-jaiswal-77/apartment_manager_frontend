@@ -107,6 +107,12 @@ export default function Main(){
         localStorage.setItem("editFlat", JSON.stringify(editFlat));
         Navigate("/editFlat");
     }
+    // ------------------------------------>
+    function navigateToResidentsPage(e){
+        const residents_flat_id = e.target.parentNode.parentNode.id;
+        localStorage.setItem("residents_flat_id", JSON.stringify(residents_flat_id));
+        Navigate("/residents");
+    }
 
     return (
         <div>
@@ -158,7 +164,8 @@ export default function Main(){
                                 <td>{flat.block}</td>
                                 <td>{flat.flat_no}</td>
                                 <td>{flat.residents_count}</td>
-                                <td><button id="edit_flat_btn" onClick={navigateToEditFlatPage}>Edit Flat</button></td>
+                                <td><button class="edit_flat_btn tr_btn" onClick={navigateToEditFlatPage}>Edit Flat</button></td>
+                                <td><button className="tr_btn" onClick={navigateToResidentsPage}>Residents</button></td>
                             </tr>
                         );
                     })}

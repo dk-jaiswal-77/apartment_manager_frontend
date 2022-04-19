@@ -1,3 +1,4 @@
+import "./Register.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -43,14 +44,15 @@ export default function Register(){
 
     return(
         <div>
-            <form onSubmit={handleSubmit}>
-                <input type="text" id="name" value={register.name} placeholder="enter name" onChange={handleChange} />
+            <form onSubmit={handleSubmit} id="register_form">
+                <h2>Sign Up</h2>
+                <input type="text" id="name" className="register_entry" value={register.name} placeholder="enter name" onChange={handleChange} />
 
-                <input type="email" id="email" value={register.email} placeholder="enter email" onChange={handleChange} />
+                <input type="email" id="email" className="register_entry" value={register.email} placeholder="enter email" onChange={handleChange} />
 
-                <input type="password" id="password" value={register.password} placeholder="enter password" onChange={handleChange} />
+                <input type="password" id="password" className="register_entry" value={register.password} placeholder="enter password" onChange={handleChange} />
 
-                <input type="submit" value="Sign Up" />
+                <input type="submit" value="Sign Up" className="register_entry" />
             </form>
         </div>
     );
