@@ -38,7 +38,7 @@ User is required to signup first. On successful login, he is directed to main pa
 
 ---
 
-### Tech Stack Used :wrench:
+### Tech Stacks Used :wrench:
 
 - `HTML`
 - `CSS`
