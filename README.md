@@ -61,4 +61,22 @@ User is required to signup first. On successful login, he is directed to main pa
 
 ![recipe](https://user-images.githubusercontent.com/92107053/159882637-d9468916-1cdc-4f7a-a6eb-5ea3b9541402.png) -->
 
+## Log In Page
+
+![Log In](https://user-images.githubusercontent.com/92107053/164013383-918709b0-53fe-42c3-81d5-4a5e3b8bb00c.png)
+
+## Home_Page
+
+![Main Page](https://user-images.githubusercontent.com/92107053/164013404-ca29a4f2-5a0b-4416-83b5-8f1d266e18f6.png)
+
+## Add Flat Page
+
+![Add Flat Page](https://user-images.githubusercontent.com/92107053/164013262-b32a6cb3-9ef2-4a92-bd3e-97b62d01e662.png)
+
+## Edit Flat Page
+
+![Edit Flat Page](https://user-images.githubusercontent.com/92107053/164013290-fd996480-7b1b-4b5a-806f-34d053dbe79c.png)
+
+## Residents Page
+![Residents Page](https://user-images.githubusercontent.com/92107053/164013419-858d691b-5537-4ccb-b236-f773e53b1b4f.png)
 
