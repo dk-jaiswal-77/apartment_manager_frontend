@@ -136,6 +136,7 @@ export default function Main(){
                     <label htmlFor="sortByFlatNo">Sort by flat no.</label>
 
                     <select id="sortByFlatNo" onChange={sortByFlatNo}>
+                        <option value="none">--sort--</option>
                         <option value="asc">Asc</option>
                         <option value="desc">Desc</option>
                     </select>
