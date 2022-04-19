@@ -5,6 +5,8 @@ import updateFlatsAction from "../../redux/updateFlats/action";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
+import { backend_url } from "../../App";
+
 export default function Main(){
 
     const Navigate = useNavigate();
@@ -34,7 +36,7 @@ export default function Main(){
 
     async function getFlats(page){
         try{
-            let res = await fetch(`http://localhost:3007/flats/${page}`);
+            let res = await fetch(`${backend_url}/flats/${page}`);
             let flats = await res.json();
             // dispatch action 
             dispatch(updateFlatsAction(flats));

@@ -1,4 +1,6 @@
-// import logo from './logo.svg';
+// https://git.heroku.com/apartment-manager-dkjaiswal77.git
+
+
 import './App.css';
 import {Routes, Route} from "react-router-dom";
 import { Link, useNavigate } from 'react-router-dom';
@@ -9,6 +11,9 @@ import Main from './components/main/Main';
 import AddFlat from './components/addFlat/AddFlat';
 import EditFlat from './components/editFlat/EditFlat';
 import Residents from './components/residents/Residents';
+
+const backend_url = "https://apartment-manager-dkjaiswal77.herokuapp.com";
+export {backend_url};
 
 function App() {
 

@@ -1,6 +1,8 @@
 import "./Residents.css";
 import {useState, useEffect} from "react";
 
+import { backend_url } from "../../App";
+
 export default function Residents(){
     const flat_id = JSON.parse(localStorage.getItem("residents_flat_id"));
 
@@ -14,7 +16,7 @@ export default function Residents(){
 
     async function getResidents(){
         try{
-            let res = await fetch(`http://localhost:3007/residents/${flat_id}`);
+            let res = await fetch(`${backend_url}/residents/${flat_id}`);
             let res_data = await res.json();
             // console.log(res_data);
             setResidents(res_data);
@@ -43,7 +45,7 @@ export default function Residents(){
 
     async function saveResident(){
         try{
-            await fetch("http://localhost:3007/residents", {
+            await fetch(`${backend_url}/residents`, {
                 method : "POST", 
                 body : JSON.stringify(residentDetail),
                 headers : {

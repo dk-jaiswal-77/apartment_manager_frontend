@@ -2,6 +2,8 @@ import "./Register.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { backend_url } from "../../App";
+
 export default function Register(){
 
     const Navigate = useNavigate();
@@ -18,7 +20,7 @@ export default function Register(){
 
     async function registerManager(){
         try{
-            let res = await fetch("http://localhost:3007/manager/register", {
+            let res = await fetch(`${backend_url}/manager/register`, {
                 method : "POST", 
                 body : JSON.stringify(register),
                 headers : {

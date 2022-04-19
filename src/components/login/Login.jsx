@@ -2,6 +2,8 @@ import "./Login.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+import { backend_url } from "../../App";
+
 
 export default function Login(){
 
@@ -18,7 +20,7 @@ export default function Login(){
 
     async function loginUser(){
         try{
-            let res = await fetch("http://localhost:3007/manager/login", 
+            let res = await fetch(`${backend_url}/manager/login`, 
             {
                 method : "POST", 
                 body : JSON.stringify(login),

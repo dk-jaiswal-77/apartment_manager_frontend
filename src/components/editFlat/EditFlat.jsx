@@ -1,6 +1,8 @@
 import "./EditFlat.css";
 import {useState} from "react";
 
+import { backend_url } from "../../App";
+
 export default function EditFlat(){
 
     let editFlat = JSON.parse(localStorage.getItem("editFlat"));
@@ -20,7 +22,7 @@ export default function EditFlat(){
 
     async function updateFlat(){
         try{
-            await fetch(`http://localhost:3007/flats/${editFlat._id}`, {
+            await fetch(`${backend_url}/flats/${editFlat._id}`, {
                 method : "PATCH", 
                 body : JSON.stringify(detail),
                 headers : {

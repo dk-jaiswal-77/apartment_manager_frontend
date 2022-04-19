@@ -1,6 +1,8 @@
 import "./AddFlat.css";
 import {useState} from "react";
 
+import { backend_url } from "../../App";
+
 export default function AddFlat(){
 
     const [detail, setDetail] = useState({
@@ -16,7 +18,7 @@ export default function AddFlat(){
 
     async function saveFlat(){
         try{
-            await fetch("http://localhost:3007/flats", {
+            await fetch(`${backend_url}/flats`, {
                 method : "POST", 
                 body : JSON.stringify(detail),
                 headers : {
