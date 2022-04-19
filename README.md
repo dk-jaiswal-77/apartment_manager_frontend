@@ -1,4 +1,4 @@
-# Food Recipe Website
+# Apartment Manager
 
 <p>
   It is an web application that allows respective manager of an apartment to add, view & update flats' details & residents' details. 
