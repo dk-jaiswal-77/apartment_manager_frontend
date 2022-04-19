@@ -1,44 +1,40 @@
 # Food Recipe Website
 
 <p>
-  It is an online website for displaying recipe contents of different categories of meals including YouTube video tutorial as well. 
+  It is an web application that allows respective manager of an apartment to add, view & update flats' details & residents' details. 
 <p/>
 
 ---
 # Welcome :wave:
 ---
-# Link to Project website:
-
-https://github.com/dk-jaiswal-77/foodRecipeWebsite
-
----
 
 # Live Demo:
 
-https://food-recipe-website-gamma.vercel.app/
+https://apartment-manager-frontend-hazel.vercel.app/
 
 ---
 
 ### About this project: :raised_hands:
 
-> It is a solo project executed in 3 days as a side project of mine. It is an online website for serching recipe of varities of meals along with YouTube video tutorials.
+> It is a solo project executed in 1 day as a side project of mine. It is an web application that allows respective manager of an apartment to add, view & update flats' details & residents' details. 
 
 ---
 
 
 ### Pages & Features :point_down:
 
-- `Sign-Up Page`: User credentials stored in mock API.
-- `Sign-In Page`: On successful authentication, user is redirected to landing page.
-- `Product Page`: Different meals are displayed on clicking on anyone of the meals, meal's recipe details will be displayed. User can also search meal recipe by its name.
-- `Recipe Of The Day page`: On this page, a random single meal is displayed with its recipe details.
-- `Latest Recipe page`: On this page, recipe details of the latest meal is displayed.
+- `Sign-Up Page`: User credentials stored in backend.
+- `Sign-In Page`: On successful authentication, user is redirected to main page.
+- `Main Page`: flats' details are displayed in form of table with numerous options.
+- `Add Flat Page`: Manager can add new flat to the server.
+- `Edit Flat Page`: Manager can edit update flat details.
+- `Residents Page`: Details of all the residents of the selected flat are displayed along with option of adding new residents.
 
 ---
 
 ### How To Use ✅
 
-First you have to create a new account. After signup, you have to login with the same details. On successful login, you will be redirected to landing page where different meals are displayed. On clicing on anyone of the meal, recipe details of the meal will be displayed along with YouTube video tutorials. You can also search meal's recipe by its name.   
+User is required to signup first. On successful login, he is directed to main page where flats' details are displayed with option of editing flats' details, viewing residents of selected flat & adding new residents to it. User can filter by resident type, sort by flat number & search by block name. Flats' details are shown in different pages (pagination). Finally he can logout.   
 
 ---
 
@@ -47,18 +43,22 @@ First you have to create a new account. After signup, you have to login with the
 - `HTML`
 - `CSS`
 - `JavaScript`
+- `React`
+- `Redux`
+- `MongoDB`
+- `Express JS`
 
 ---
 
 ### Screenshots:
 <hr/>
-
+<!-- 
 ## Home_Page
 
 ![product_page](https://user-images.githubusercontent.com/92107053/159882513-01a1ebe5-1038-44c4-b974-f81931a758b1.png)
 
 ## Recipe_Page
 
-![recipe](https://user-images.githubusercontent.com/92107053/159882637-d9468916-1cdc-4f7a-a6eb-5ea3b9541402.png)
+![recipe](https://user-images.githubusercontent.com/92107053/159882637-d9468916-1cdc-4f7a-a6eb-5ea3b9541402.png) -->
 
 
