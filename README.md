@@ -52,14 +52,6 @@ User is required to signup first. On successful login, he is directed to main pa
 
 ### Screenshots:
 <hr/>
-<!-- 
-## Home_Page
-
-![product_page](https://user-images.githubusercontent.com/92107053/159882513-01a1ebe5-1038-44c4-b974-f81931a758b1.png)
-
-## Recipe_Page
-
-![recipe](https://user-images.githubusercontent.com/92107053/159882637-d9468916-1cdc-4f7a-a6eb-5ea3b9541402.png) -->
 
 ## Log In Page
 
